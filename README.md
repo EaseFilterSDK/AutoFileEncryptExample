@@ -18,3 +18,5 @@ Encrypted your files with digital rights management data embedded into the encry
 With the C# auto file encryption example, you can setup an encryption folder in computer A, configure the authorized processes, users who can read the encrypted file, then you can setup the decryption folder in computer B, you can copy the encrypted file to this folder, and configure the authorized processes which can read the encrypted files in the decryption folder.
 
 ![File Monitor](https://www.easefilter.com/images/autoencryptdemo.png)
+
+[Read more about auto file encryption example](https://www.easefilter.com/Forums_Files/AutoFileEncryption.htm)
