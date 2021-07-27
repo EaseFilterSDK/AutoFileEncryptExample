@@ -222,41 +222,41 @@ namespace EaseFilter.FilterControl
     /// <summary>
     /// The callback information of the file change event.
     /// </summary>
-    public class FileChangeEventArgs : FileIOEventArgs
+    public class FileChangedEventArgs : FileIOEventArgs
     {
-        public FileChangeEventArgs(FilterAPI.MessageSendData messageSend)
+        public FileChangedEventArgs(FilterAPI.MessageSendData messageSend)
             : base(messageSend)
         {
 
-            if ((messageSend.InfoClass & (uint)FilterAPI.MonitorFileEvents.NotifyFileWasCreated) > 0)
+            if ((messageSend.InfoClass & (uint)FilterAPI.FileChangedEvents.NotifyFileWasCreated) > 0)
             {
-                eventType = FilterAPI.MonitorFileEvents.NotifyFileWasCreated;
+                eventType = FilterAPI.FileChangedEvents.NotifyFileWasCreated;
                 EventName = "NotifyFileWasCreated;";
                 Description = "The new file " + FileName + " was created.";
             }
 
-            if ((messageSend.InfoClass & (uint)FilterAPI.MonitorFileEvents.NotifyFileWasWritten) > 0)
+            if ((messageSend.InfoClass & (uint)FilterAPI.FileChangedEvents.NotifyFileWasWritten) > 0)
             {
-                eventType |= FilterAPI.MonitorFileEvents.NotifyFileWasWritten;
+                eventType |= FilterAPI.FileChangedEvents.NotifyFileWasWritten;
                 EventName += "NotifyFileWasWritten;";
                 Description += "The file " + FileName + " was written.";
             }
 
-            if ((messageSend.InfoClass & (uint)FilterAPI.MonitorFileEvents.NotifyFileWasDeleted) > 0)
+            if ((messageSend.InfoClass & (uint)FilterAPI.FileChangedEvents.NotifyFileWasDeleted) > 0)
             {
-                eventType |= FilterAPI.MonitorFileEvents.NotifyFileWasDeleted;
+                eventType |= FilterAPI.FileChangedEvents.NotifyFileWasDeleted;
                 EventName += "NotifyFileWasDeleted;";
                 Description += "The file " + FileName + " was deleted.";
             }
 
-            if ((messageSend.InfoClass & (uint)FilterAPI.MonitorFileEvents.NotifyFileInfoWasChanged) > 0)
+            if ((messageSend.InfoClass & (uint)FilterAPI.FileChangedEvents.NotifyFileInfoWasChanged) > 0)
             {
-                eventType |= FilterAPI.MonitorFileEvents.NotifyFileInfoWasChanged;
+                eventType |= FilterAPI.FileChangedEvents.NotifyFileInfoWasChanged;
                 EventName += "NotifyFileInfoWasChanged;";
                 Description += "The file " + FileName + " information was changed.";
             }
 
-            if ((messageSend.InfoClass & (uint)FilterAPI.MonitorFileEvents.NotifyFileWasRenamed) > 0)
+            if ((messageSend.InfoClass & (uint)FilterAPI.FileChangedEvents.NotifyFileWasRenamed) > 0)
             {
                 if (messageSend.DataBufferLength > 0)
                 {
@@ -267,24 +267,25 @@ namespace EaseFilter.FilterControl
                     }
                 }
 
-                eventType |= FilterAPI.MonitorFileEvents.NotifyFileWasRenamed;
+                eventType |= FilterAPI.FileChangedEvents.NotifyFileWasRenamed;
                 EventName += "NotifyFileWasRenamed;";
                 Description += "The file " + FileName + " was renamed to " + newFileName + ".";
             }
 
-            if ((messageSend.InfoClass & (uint)FilterAPI.MonitorFileEvents.NotifyFileSecurityWasChanged) > 0)
+            if ((messageSend.InfoClass & (uint)FilterAPI.FileChangedEvents.NotifyFileSecurityWasChanged) > 0)
             {
-                eventType |= FilterAPI.MonitorFileEvents.NotifyFileSecurityWasChanged;
+                eventType |= FilterAPI.FileChangedEvents.NotifyFileSecurityWasChanged;
                 EventName += "NotifyFileSecurityWasChanged;";
                 Description += "The file " + FileName + " security was changed.";
             }
 
-            if ((messageSend.InfoClass & (uint)FilterAPI.MonitorFileEvents.NotifyFileWasRead) > 0)
+            if ((messageSend.InfoClass & (uint)FilterAPI.FileChangedEvents.NotifyFileWasRead) > 0)
             {
-                eventType |= FilterAPI.MonitorFileEvents.NotifyFileWasRead;
+                eventType |= FilterAPI.FileChangedEvents.NotifyFileWasRead;
                 EventName += "NotifyFileWasRead;";
-                Description += "The file " + FileName + " data was read.";
+                Description += "The file " + FileName + " was read.";
             }
+
         }
 
         /// <summary>
@@ -294,7 +295,7 @@ namespace EaseFilter.FilterControl
         /// <summary>
         /// The event type of the file change event.
         /// </summary>
-        public FilterAPI.MonitorFileEvents eventType { get; set; }
+        public FilterAPI.FileChangedEvents eventType { get; set; }
       
     }
 

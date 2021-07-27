@@ -475,7 +475,7 @@ namespace EaseFilter.FilterControl
                             return false;
                         }
 
-                        if (fileFilter.FileChangeEventFilter > 0 && !FilterAPI.RegisterEventTypeToFilterRule(fileFilter.IncludeFileFilterMask, (uint)fileFilter.FileChangeEventFilter))
+                        if (fileFilter.FileChangeEventFilter > 0 && !FilterAPI.RegisterFileChangedEventsToFilterRule(fileFilter.IncludeFileFilterMask, (uint)fileFilter.FileChangeEventFilter))
                         {
                             lastError = "Register file event type:" + fileFilter.FileChangeEventFilter + " failed:" + FilterAPI.GetLastErrorMessage();
                             return false;

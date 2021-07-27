@@ -485,9 +485,9 @@ namespace EaseFilter.FilterControl
         }
 
         /// <summary>
-        /// The events which happened between the file opens and file closes, it will be fired after the file handle was closed.
+        /// The file changed events for monitor filter, it will be fired after the file handle was closed.
         /// </summary>
-        public enum MonitorFileEvents:uint
+        public enum FileChangedEvents:uint
         {
             /// <summary>
             /// Fires this event when the new file was created after the file handle closed
@@ -516,7 +516,7 @@ namespace EaseFilter.FilterControl
             /// <summary>
             /// Fires this event when the file's data was read after the file handle closed
             /// </summary>
-            NotifyFileWasRead = 0x00000800,          
+            NotifyFileWasRead = 0x00000800,
         }
 
         /// <summary>
@@ -1253,14 +1253,14 @@ namespace EaseFilter.FilterControl
         [MarshalAs(UnmanagedType.LPWStr)]string userName);
 
         /// <summary>
-        /// Register the file I/O event types for the filter rule, get the notification when the I/O was triggered
+        /// Register the file changed events for the filter rule, get the notification when the I/O was triggered
         /// after the file handle was closed.
         /// </summary>
         /// <param name="filterMask">the file filter mask of the filter rule</param>
         /// <param name="eventType">the I/O event types,reference the FileEventType enumeration.</param>
         /// <returns></returns>
         [DllImport("FilterAPI.dll", SetLastError = true)]
-        public static extern bool RegisterEventTypeToFilterRule(
+        public static extern bool RegisterFileChangedEventsToFilterRule(
         [MarshalAs(UnmanagedType.LPWStr)]string filterMask,
         uint eventType);
 

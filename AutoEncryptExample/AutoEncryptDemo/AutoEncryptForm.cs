@@ -42,7 +42,7 @@ namespace AutoEncryptDemo
 
             string passPhrase = textBox_PassPhrase.Text.Trim();
 
-            string licenseKey = "7ECF8-58DEE-755D3-C186E-C32CF-6C696";
+            string licenseKey = GlobalConfig.licenseKey;
             GlobalConfig.filterType = FilterAPI.FilterType.CONTROL_FILTER | FilterAPI.FilterType.ENCRYPTION_FILTER| FilterAPI.FilterType.PROCESS_FILTER;
 
             bool ret = false;
