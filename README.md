@@ -3,10 +3,11 @@
  
 ![File Monitor](https://www.easefilter.com/Images/TransparentFileEncryption.png)
 
-## The features of the EaseFilter Encryption SDK:
-1. **Completely transparent file encryption in file system level.**
-2. **Random block level decryption.**
-3. **High encryption or decryption performance.**
+## The advantages of the EaseFilter Encryption SDK:
+1. **Completely transparent file encryption in file system level.** The encryption process was done in the write IO request, the decryption process was done in the read IO request, there are no extra IO request needed, it is completely transparent to the applications or users, the encryption or decryption doesn't require the application to interfere. 
+2. **Keep encrypted file on disk all the time.** Since the decryption data only was kept in memory, only the authorized users or processes can see the decrypted data.
+3. **Random block level decryption.** You can decrypt the blocks of the file, you don't need to decrypt the whole file for all the time. For large encrypted file, if you only want to read the blocks of the data, it will improve the performance dramatically.
+4. **High encryption or decryption performance.** EaseFilter Encryption Engine utilizes the US FIPS 140-2 compliant Microsoft CNG libraries, it can support AES-NI (or the Intel Advanced Encryption Standard New Instructions; AES-NI), at an algorithm level AES-NI provides significant speedup of AES. For non-Parallel modes of AES operation (CBC encrypt), AES-NI can provide 2-3 fold gain in performance over a completely software encryption. For parallel modes of AES operation (CBC-decrypt, CTR), AES-NI can provide 10x improvement over a completely software encryption.
    
 
 ## The products you can develop with EaseFilter Encryption SDK:
