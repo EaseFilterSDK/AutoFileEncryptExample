@@ -3,6 +3,12 @@
  
 ![File Monitor](https://www.easefilter.com/Images/TransparentFileEncryption.png)
 
+## The features of the EaseFilter Encryption SDK:
+1. Completely transparent file encryption in file system level.
+2. Random block level decryption.
+3. High encryption or decryption performance.
+   
+
 ## The products you can develop with EaseFilter Encryption SDK:
 
 1. Data encryption at rest. Encryption at rest prevents the attacker from accessing the unencrypted data by ensuring the data is encrypted when on disk.
@@ -15,6 +21,7 @@ Data protection.
 4. Secure file sharing with DRM.
 Encrypted your files with digital rights management data embedded into the encrypted header, protect, track and control your encrypted files anywhere anytime, you can grant or revoke the access control to any user at any time even the files were shared.
 
+## A C# Auto File Encryption Example
 With the C# auto file encryption example, you can setup an encryption folder in computer A, configure the authorized processes, users who can read the encrypted file, then you can setup the decryption folder in computer B, you can copy the encrypted file to this folder, and configure the authorized processes which can read the encrypted files in the decryption folder.
 
 ![File Monitor](https://www.easefilter.com/images/autoencryptdemo.png)
