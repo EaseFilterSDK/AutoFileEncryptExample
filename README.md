@@ -1,4 +1,4 @@
-# Transparent File Encryption SDK
+# [Transparent File Encryption SDK](https://www.easefilter.com/Forums_Files/Transparent_Encryption_Filter_Driver.htm)
  A C# transparent file encryption example was implemented with the Transparent File Encryption Filter Driver SDK. The transparent file encryption performs real-time I/O encryption and decryption of the files in any block data with 16 bytes. The encryption uses a 256 bits symmetric key to encrypt or decrypt the data with AES encryption algorithm. Auto file encryption protects data "at rest", meaning the transparent data and files encryption. It provides the ability to comply with policies which can be applied by users, processes and file type. This allows only authorized users and processes to access the encrypted files, unauthorized users and processes can’t access the encrypted files.
  
 ![File Monitor](https://www.easefilter.com/Images/TransparentFileEncryption.png)
