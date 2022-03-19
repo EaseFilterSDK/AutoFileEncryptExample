@@ -1,7 +1,7 @@
-# [Transparent File Encryption SDK](https://www.easefilter.com/Forums_Files/Transparent_Encryption_Filter_Driver.htm)
+﻿# [Transparent File Encryption SDK](https://www.easefilter.com/Forums_Files/Transparent_Encryption_Filter_Driver.htm)
  A C# transparent file encryption example was implemented with the Transparent File Encryption Filter Driver SDK. The transparent file encryption performs real-time I/O encryption and decryption of the files in any block data with 16 bytes. The encryption uses a 256 bits symmetric key to encrypt or decrypt the data with AES encryption algorithm. Auto file encryption protects data "at rest", meaning the transparent data and files encryption. It provides the ability to comply with policies which can be applied by users, processes and file type. This allows only authorized users and processes to access the encrypted files, unauthorized users and processes can’t access the encrypted files.
  
-![File Monitor](https://www.easefilter.com/Images/TransparentFileEncryption.png)
+![File Encryption](https://www.easefilter.com/Images/TransparentFileEncryption.png)
 
 ## The advantages of the EaseFilter Encryption SDK:
 1. **Completely transparent file encryption in file system level.** The encryption process was done in the write IO request, the decryption process was done in the read IO request, there are no extra IO request needed, it is completely transparent to the applications or users, the encryption or decryption doesn't require the application to interfere. 
@@ -26,6 +26,6 @@ Encrypted your files with digital rights management data embedded into the encry
 ## A C# Auto File Encryption Example
 With the C# auto file encryption example, you can setup an encryption folder in computer A, configure the authorized processes, users who can read the encrypted file, then you can setup the decryption folder in computer B, you can copy the encrypted file to this folder, and configure the authorized processes which can read the encrypted files in the decryption folder.
 
-![File Monitor](https://www.easefilter.com/images/autoencryptdemo.png)
+![File Encryption Demo](https://www.easefilter.com/images/autoencryptdemo.png)
 
 [Read more about auto file encryption example](https://www.easefilter.com/Forums_Files/AutoFileEncryption.htm)
